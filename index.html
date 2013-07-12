@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Hullen Gonzales (@hullen)">
+        <title>Wordpress SQL Update Generator</title>
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.2.0/pure-nr-min.css">
+        <style type="text/css">
+            body > header { width: 980px; margin: 0 auto; }
+            body > .pure-g { width: 980px; margin: 0 auto; }
+        </style>
+        <script>
+        var protosql = {
+            getValue : function getValue(f) {
+                var urls = [],
+                formE = document.forms[f];
+                urls['oldname'] = formE['url-old'].value;
+                urls['newname'] = formE['url-new'].value;
+            	this.setURLs(urls);
+            },
+            setURLs : function setURLs(urls) {
+                var el = document.getElementById("sqlfinal");
+                var sqlsfinal = 'Sorry, you need enter the URLs!';
+                if(urls['oldname'] != '' && urls['newname'] != '') {
+                    sqls = 'UPDATE wp_options SET option_value = replace(option_value, "' + urls['oldname'] + '", "' + urls['newname'] + '") WHERE option_name = "home" OR option_name = "siteurl";\n';
+                    sqls += 'UPDATE wp_posts SET guid = REPLACE (guid, "' + urls['oldname'] + '", "' + urls['newname'] + '");\n';
+                    sqls += 'UPDATE wp_posts SET post_content = REPLACE (post_content, "' + urls['oldname'] + '", "' + urls['newname'] + '");\n';
+                    sqls += 'UPDATE wp_postmeta SET meta_value = REPLACE (meta_value, "' + urls['oldname'] + '", "' + urls['newname'] + '");';
+                    sqlsfinal = sqls;
+                }
+                el.innerHTML = sqlsfinal;
+            },
+            sendForm : function sendForm(formE) {
+                var f = formE.name;
+                this.getValue(f);
+            }
+        }
+        var wpsql = Object.create(protosql);
+        </script>
+    </head>
+    <body>
+		<header>
+			<h1>Wordpress SQL Update HELP</h1>
+		</header>
+		<div class="pure-g">
+		    
+		    <form name="frmsql" class="pure-form pure-form-stacked" onsubmit="javascript:wpsql.sendForm(this); return false;">
+			    <fieldset>
+			        <legend></legend>
+
+			        <div class="pure-g-r">
+			            <div class="pure-u-1-2">
+			                <label for="url-old">URL Antiga</label>
+			                <input id="url-old" name="url-old" type="text" placeholder="http://">
+			            </div>
+
+			            <div class="pure-u-1-2">
+			                <label for="url-new">URL Nova</label>
+			                <input id="url-new" name="url-new" type="text" placeholder="http://">
+			            </div>
+
+			        </div>
+			        <p></p>
+
+			        <button type="submit" class="pure-button notice">Pronto</button>
+			    </fieldset>
+			</form>
+			
+
+			<pre class="snippet" data-language="sql">
+<code id="sqlfinal" class="rainbow"></code>
+			</pre>
+		</div>
+    </body>
+</html>
