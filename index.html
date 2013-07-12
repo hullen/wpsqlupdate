@@ -5,11 +5,26 @@
         <meta name="viewport" content="width=device-width">
         <meta name="author" content="Hullen Gonzales (@hullen)">
         <title>Wordpress SQL Update Generator</title>
+        <meta property="og:title" content="Wordpress SQL Update Generator" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="http://s.wordpress.org/about/images/logos/wordpress-logo-stacked-rgb.png" />
+        <meta property="og:url" content="http://hullen.github.io/wpsqlupdate" />
+        <meta property="og:description" content="This project generates a MySQL Query to update the database when you deploy your application" />
+        <meta property="og:site_name" content="Wordpress SQL Update Generator" />
+        <meta property="fb:admins" content="10200932160559486" />
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.2.0/pure-nr-min.css">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="script.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,9 +32,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-8835482-11', 'hullen.github.io');
-          ga('send', 'pageview');
-
-        </script>
+          ga('send', 'pageview');</script>
         <header>
             <h1>Wordpress SQL Update Generator</h1>
         </header>
@@ -53,6 +66,19 @@
         </main>
         <footer class="pure-g">
             <div class="pure-u-1">
+                <div class="share-this">
+                    <div class="fb-like" data-href="http://hullen.github.io/wpsqlupdate" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-action="recommend"></div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hullen.github.io/wpsqlupdate" data-via="hullen" data-related="hullen" data-hashtags="wpsqlupdate">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <div class="g-plusone"></div>
+                    <script type="text/javascript">
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                </div>
                 <small>developed by Hullen Gonzales (twitter.com/hullen)</small>
             </div>
         </footer>
