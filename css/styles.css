@@ -2,4 +2,11 @@
 body > header,
 body > .pure-g { width: 980px; margin: 0 auto; }
 footer { text-align: center; color: gray;}
-.fb-like { width: 230px;} 
+.fb-like { width: 230px;}
+
+/* A code snippet that has been syntax highlighted */
+.content .snippet { margin: 1.3em 0 1.8em; padding: 1.3em;}
+pre { word-wrap: break-word; padding: 6px 10; line-height: 1.3em; margin-bottom: 20; border: 1px solid #eee;}
+code { border: none; margin: 0 2px; font-size: 0.8em; padding: 0.4em 0.6em; white-space: nowrap;}
+pre code { padding: 0; margin: 0; font-size: 0.95em; white-space: pre-wrap;}
+pre, code { font-family: Consolas, 'Liberation Mono', Courier, monospace; color: #333; background: rgb(250, 250, 250);}
