@@ -1,5 +1,6 @@
 /* Made by Hullen Gonzales (twitter.com/hullen) */
 body > .pure-g { width: 980px; margin: 0 auto; font-family: pt-sans-narrow; }
+header { padding-bottom: 2em;}
 header h1 { margin: 0.2em 0; font-size: 3em; font-weight: 600;}
 header h2 { font-weight: 300; margin: 0; color: #ccc;}
 footer { text-align: center; color: gray;}
