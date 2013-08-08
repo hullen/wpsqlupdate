@@ -1,11 +1,12 @@
 /* Made by Hullen Gonzales (twitter.com/hullen) */
-body > header,
-body > .pure-g { width: 980px; margin: 0 auto; }
+body > .pure-g { width: 980px; margin: 0 auto; font-family: pt-sans-narrow; }
+header h1 { margin: 0.2em 0; font-size: 3em; font-weight: 600;}
+header h2 { font-weight: 300; margin: 0; color: #ccc;}
 footer { text-align: center; color: gray;}
 .fb-like { width: 230px;}
 
 /* A code snippet that has been syntax highlighted */
-.content .snippet { margin: 1.3em 0 1.8em; padding: 1.3em;}
+.content .snippet { margin: 1.3em 0 1.8em; padding: 1.3em; opacity:0;}
 pre { word-wrap: break-word; padding: 6px 10; line-height: 1.3em; margin-bottom: 20; border: 1px solid #eee;}
 code { border: none; margin: 0 2px; font-size: 0.8em; padding: 0.4em 0.6em; white-space: nowrap;}
 pre code { padding: 0; margin: 0; font-size: 0.95em; white-space: pre-wrap;}

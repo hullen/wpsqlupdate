@@ -14,6 +14,7 @@
         <meta property="fb:admins" content="10200932160559486" />
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="http://use.edgefonts.net/pt-sans-narrow:n4,n7:all.js"></script>
         <script src="js/script.js"></script>
     </head>
     <body>
@@ -33,13 +34,19 @@
 
           ga('create', 'UA-8835482-11', 'hullen.github.io');
           ga('send', 'pageview');</script>
-        <header>
-            <h1>Wordpress URL Update Generator</h1>
+        <header class="pure-g">
+            <div class="pure-u-1">
+                <h1>Wordpress URL Update Generator</h1>
+                <h2>Update yours URLs on the database quickly!</h2>
+            </div>
         </header>
         <main class="pure-g content">
+            <div class="pure-u">
+                <p>This project generates a MySQL Query to update the URLs on the database when you deploy your application</p>
+            </div>
             <form name="frmsql" class="pure-form pure-form-stacked" onsubmit="wpsql.sendForm(this); return false;">
                 <fieldset>
-                    <legend class="pure-u-1">This project generates a MySQL Query to update the URLs on the database when you deploy your application</legend>
+                    <legend class="pure-u-1">Enter the URLs on inputs above and press generate:</legend>
 
                     <div class="pure-g-r">
                         <div class="pure-u-1-2">
@@ -55,12 +62,11 @@
                     </div>
                     <p></p>
                     <div class="pure-u">
-                        <button type="submit" class="pure-button notice">Okay ;)</button>
+                        <button type="submit" class="pure-button notice">Generate ;)</button>
                     </div>
                 </fieldset>
             </form>
-
-            <pre class="snippet pure-u-1" data-language="sql">
+            <pre id="response" class="snippet pure-u" data-language="sql">
 <code id="sqlfinal" class="rainbow"></code>
             </pre>
         </main>
@@ -78,6 +84,7 @@
                         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                       })();
                     </script>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=hullen&repo=wpsqlupdate&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
                 </div>
                 <small>developed by Hullen Gonzales (twitter.com/hullen)</small>
             </div>
