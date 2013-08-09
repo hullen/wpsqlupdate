@@ -36,33 +36,40 @@
           ga('send', 'pageview');</script>
         <header class="pure-g">
             <div class="pure-u-1">
-                <h1>Wordpress URL Update Generator</h1>
-                <h2>Update yours URLs on the database quickly!</h2>
+                <h1 id="heading-1"></h1>
+                <h2 id="heading-2"></h2>
+            </div>
+
+            <div class="lang">
+                <ul class="flags-list">
+                    <li class="flags pure-u-1" id="pt">português</li>
+                    <li class="flags pure-u-1" id="en">english</li>
+                </ul>
             </div>
         </header>
         <main class="pure-g content">
             <div class="pure-u">
-                <p>This project generates a MySQL Query to update the URLs on the database when you deploy your application</p>
+                <p id="desc"></p>
             </div>
             <form name="frmsql" class="pure-form pure-form-stacked" onsubmit="wpsql.sendForm(this); return false;">
                 <fieldset>
-                    <legend class="pure-u-1">Enter the URLs on inputs above and press generate:</legend>
+                    <legend class="pure-u-1" id="usage"></legend>
 
                     <div class="pure-g-r">
                         <div class="pure-u-1-2">
-                            <label for="url-old">Old URL</label>
+                            <label for="url-old" id="old-label"></label>
                             <input id="url-old" name="url-old" class="pure-input-2-3" type="text" placeholder="http://">
                         </div>
 
                         <div class="pure-u-1-2">
-                            <label for="url-new">New URL</label>
+                            <label for="url-new" id="new-label"></label>
                             <input id="url-new" name="url-new" class="pure-input-2-3" type="text" placeholder="http://">
                         </div>
 
                     </div>
                     <p></p>
                     <div class="pure-u">
-                        <button type="submit" class="pure-button notice">Generate ;)</button>
+                        <button type="submit" class="pure-button notice" id="generate"></button>
                     </div>
                 </fieldset>
             </form>
@@ -86,8 +93,11 @@
                     </script>
                     <iframe src="http://ghbtns.com/github-btn.html?user=hullen&repo=wpsqlupdate&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
                 </div>
-                <small>developed by Hullen Gonzales (twitter.com/hullen)</small>
+                <small><span id="dev-by"></span> Hullen Gonzales (twitter.com/hullen)</small>
             </div>
         </footer>
+
+        <script src="js/languages.js"></script>
+
     </body>
 </html>
