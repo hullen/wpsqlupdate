@@ -1,10 +1,13 @@
 /**
 * WP SQL UPDATE GENERATOR
-*  
+* 
+* Translate the page content whenever the user want to change de language.
+* Portuguese is the dafault language*
+*
 * @contributor: Fernando Porazzi | twitter: @fernandoporazzi
 * 
-* JSON translation file
-* 
+* August - 2013
+*
 */
 
 var languages = {
