@@ -1,4 +1,8 @@
-/* Made by Hullen Gonzales (twitter.com/hullen) */
+/**
+* WP SQL UPDATE GENERATOR
+* 
+* Author -  Hullen Gonzales (twitter.com/hullen) 
+*/
 var wpsql = function () {
     function setURLs(urls) {
       var el = document.getElementById("sqlfinal"),
