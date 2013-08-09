@@ -21,7 +21,8 @@ var languages = {
 			"newLabel": "URL Nova"
 		},
 		"submit": "Gerar ;)",
-		"author": "Desenvolvido por"
+		"author": "Desenvolvido por",
+        "alert": "Ops, você precisa digitar as URLs!"
 	},
 
 	"en":{
@@ -34,7 +35,8 @@ var languages = {
 			"newLabel": "New URL"
 		},
 		"submit": "Generate ;)",
-		"author": "Developed by"
+		"author": "Developed by",
+        "alert": "Ops, you need enter the URLs!"
 	}
 }
 
@@ -60,6 +62,7 @@ var Lang = {
 		this._('new-label').innerHTML = this.obj.labels.newLabel;
 		this._('generate').innerHTML = this.obj.submit;
 		this._('dev-by').innerHTML = this.obj.author;
+        alert = this.obj.alert;
 	},
 
 	_: function (el) {
