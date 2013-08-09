@@ -8,7 +8,7 @@ var wpsql = function () {
       var el = document.getElementById("sqlfinal"),
           snpp = document.getElementById("response"),
           sqls = '',
-          sqlsfinal = 'Sorry, you need enter the URLs!';
+          sqlsfinal = alert;
       if (urls.oldname !== '' && urls.newname !== '') {
         sqls = 'UPDATE wp_options SET option_value = replace(option_value, "' + urls.oldname + '", "' + urls.newname + '") WHERE option_name = "home" OR option_name = "siteurl";\n';
         sqls += 'UPDATE wp_posts SET guid = REPLACE (guid, "' + urls.oldname + '", "' + urls.newname + '");\n';
