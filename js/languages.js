@@ -1,7 +1,7 @@
 /**
 * WP SQL UPDATE GENERATOR
 *  
-* @author: Fernando Porazzi | twitter: @fernandoporazzi
+* @contributor: Fernando Porazzi | twitter: @fernandoporazzi
 * 
 * JSON translation file
 * 
