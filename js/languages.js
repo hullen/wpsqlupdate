@@ -2,7 +2,7 @@
 * WP SQL UPDATE GENERATOR
 * 
 * Translate the page content whenever the user want to change de language.
-* Portuguese is the dafault language*
+* Portuguese is the default language
 *
 * @contributor: Fernando Porazzi | twitter: @fernandoporazzi
 * 
